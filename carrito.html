@@ -3,18 +3,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./js/main.mjs"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"
+      integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <style>
+      body {
+        text-align: center;
+      }
+      main {
+        max-width: 1200px;
+        margin: auto;
+      }
       .product-item {
         border-radius: 2em;
         border: solid 2px black;
         list-style: none;
         padding: 1em;
+        width: 250px;
+        max-width: 300px;
+        margin: auto;
       }
       .product-grid {
         display: grid;
-        gap: 1rem;
+        gap: 4rem;
         grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        width: max-content;
+        margin: 2rem auto;
+      }
+      .product-grid img {
+        transition: 0.4s;
+      }
+      .product-grid img:hover {
+        transform: scale(1.1);
       }
     </style>
     <title>Carrito</title>
@@ -27,29 +51,10 @@
     <main>
       <template id="product-item-template">
         <li class="product-item" id="{{product.id}}">
-          <!--Definition list-->
-          <dl>
-            <!--Definition term-->
-            <dt>Brand</dt>
-            <!--Definition description-->
-            <dd>{{product.brand}}</dd>
-            <dt>Model</dt>
-            <dd>{{product.model}}</dd>
-            <dt>Variant</dt>
-            <dd>{{product.variant}}</dd>
-            <dt>Price</dt>
-            <dd>{{product.price}}</dd>
-          </dl>
-<<<<<<< HEAD
-          <img
-            src="./img/apple-iphone-15-pro-max.jpeg"
-            data-field="pictureURL"
-            data-template-target="src"
-          />
-=======
-          <img src="./img/{{product.id}}.jpeg">
-
->>>>>>> 801b7abdc6bdda3b90a9d352a48866cffe6aaba0
+          <h2>{{product.brand}} {{product.model}}</h2>
+          <h3>{{product.variant}}</h3>
+          <img src="./img/{{product.id}}.jpeg" /><br />
+          <h2>{{product.price}} €</h2>
           <button>Buy</button>
         </li>
       </template>
