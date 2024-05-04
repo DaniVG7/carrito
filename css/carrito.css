@@ -29,19 +29,46 @@ main {
 
 .product-grid img {
     transition: 1s;
+    background-color: transparent;
 }
 
 .product-grid img:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 button{
   background-color: blue;
   font-weight: bold;
   color: white;
-  padding: 5px;
-  width: 60px;
-  border-radius: 40px;
+  padding: 10px;
+  width: max-content;
+  border-radius: 10px;
   border:1px black groove;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover{
+  background-color: wheat;
+  color: blue;
+  font-weight: bold;
+}
+
+.cart{
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+.cart button{
+  background-color: lightgreen;
+  border: none;
+}
+.cart a{
+  margin-right: 5px;
+  font-weight: bolder;
+  color: rgba(9, 10, 10, 0.393);
+  transition: 0.5s;
+}
+.cart a:hover{
+  font-size: 20px;
 }
