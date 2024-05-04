@@ -16,6 +16,13 @@ main {
     width: 250px;
     max-width: 300px;
     margin: auto;
+
+}
+.product-item:hover{
+    background-color: rgba(236, 224, 224, 0.2);
+}
+.product-item img{
+  border-radius: 20px;
 }
 
 .product-grid {
@@ -55,7 +62,10 @@ button:hover{
 }
 
 .cart{
-  position: absolute;
+  background-color: rgba(100, 96, 96, 0.5);
+  padding: 15px;
+  border-radius: 1em;
+  position: fixed;
   right: 5%;
   top: 5%;
 }
@@ -64,9 +74,9 @@ button:hover{
   border: none;
 }
 .cart a{
-  margin-right: 5px;
+  margin-right: 10px;
   font-weight: bolder;
-  color: rgba(9, 10, 10, 0.393);
+  color: white;
   transition: 0.5s;
 }
 .cart a:hover{
