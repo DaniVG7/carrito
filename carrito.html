@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./js/main.mjs"></script>
     <style>
-      .product-item{
+      .product-item {
         border-radius: 2em;
-        border:solid 2px black;
+        border: solid 2px black;
         list-style: none;
         padding: 1em;
       }
       .product-grid {
-        display:grid;
+        display: grid;
         gap: 1rem;
         grid-template-columns: 1fr 1fr;
       }
@@ -22,9 +21,7 @@
   <body>
     <header>
       <h1>Productos</h1>
-      <form id="brand-filters">
-
-      </form>
+      <form id="brand-filters"></form>
     </header>
     <main>
       <template id="product-item-template">
@@ -42,11 +39,15 @@
             <dt>Price</dt>
             <dd data-field="price"></dd>
           </dl>
+          <img
+            src="./img/apple-iphone-15-pro-max.jpeg"
+            data-field="pictureURL"
+            data-template-target="src"
+          />
+          <button>Buy</button>
         </li>
       </template>
-      <ul id="product-list" class="product-grid">
-
-      </ul>
+      <ul id="product-list" class="product-grid"></ul>
     </main>
     <aside></aside>
     <footer></footer>
