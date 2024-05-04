@@ -4,23 +4,15 @@ import { all } from "./catalogo.mjs";
 
 const template = document.querySelector("#product-item-template")
 const target = document.querySelector("#product-list")
+const hbTemplate = Handlebars.compile(
+  template.content.firstElementChild.outerHTML
+)
 
 function displayProducts(products) {
   target.innerHTML = ""
   for (let product of products) {
-    console.log(product)
-
-    // Crear un elemento nuevo li que es una copia de los elementos que son necesarios
-    // y meterlo dentro de target
-    console.log(template.content.firstElementChild)
-    let item = template.content.firstElementChild.cloneNode(true)
-
-    let hbTemplate = Handlebars.compile(item.outerHTML);
-    let output = hbTemplate(product)
-
-    target.appendChild(item)
-    item.outerHTML = output
-    console.log(item)
+    let output = hbTemplate({product: product})
+    target.insertAdjacentHTML("beforeend", output)
   }
 }
 

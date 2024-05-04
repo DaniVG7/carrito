@@ -29,21 +29,21 @@
     </header>
     <main>
       <template id="product-item-template">
-        <li class="product-item" id="{{id}}">
+        <li class="product-item" id="{{product.id}}">
           <!--Definition list-->
           <dl>
             <!--Definition term-->
             <dt>Brand</dt>
             <!--Definition description-->
-            <dd>{{brand}}</dd>
+            <dd>{{product.brand}}</dd>
             <dt>Model</dt>
-            <dd>{{model}}</dd>
+            <dd>{{product.model}}</dd>
             <dt>Variant</dt>
-            <dd>{{variant}}</dd>
+            <dd>{{product.variant}}</dd>
             <dt>Price</dt>
-            <dd>{{price}}</dd>
+            <dd>{{product.price}}</dd>
           </dl>
-          <img src="{{pictureURL}}">
+          <img src="./img/{{product.id}}.jpeg">
 
           <button>Buy</button>
         </li>
