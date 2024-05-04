@@ -4,8 +4,12 @@ import { all } from "./catalogo.mjs";
 
 const template = document.querySelector("#product-item-template")
 const target = document.querySelector("#product-list")
+const hbTemplate = Handlebars.compile(
+  template.content.firstElementChild.outerHTML
+)
 
 function displayProducts(products) {
+<<<<<<< HEAD
   target.innerHTML = "";
   for (let product of products) {
     // console.log(product)
@@ -34,6 +38,12 @@ function displayProducts(products) {
     target.appendChild(item)
     item.setAttribute("id", product.id)
     console.log("item: ", item);
+=======
+  target.innerHTML = ""
+  for (let product of products) {
+    let output = hbTemplate({product: product})
+    target.insertAdjacentHTML("beforeend", output)
+>>>>>>> 801b7abdc6bdda3b90a9d352a48866cffe6aaba0
   }
 }
 

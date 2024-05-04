@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import data from "./data.mjs"
 
@@ -17,11 +18,18 @@ class Product {
 const catalog = data.map(function (item) {
   return new Product(item)
 });
+=======
+import data from "./data.mjs"
+
+
+const catalog = data
+>>>>>>> 801b7abdc6bdda3b90a9d352a48866cffe6aaba0
 
 function all() {
   return [...catalog];
 }
 
+<<<<<<< HEAD
 function filterByBrands(brands) {  //cogemos todo el catalogo y lo filtramos
   if (brands.length === 0) {
     return all();   // si no hay nada señalado devuelve todo
@@ -29,6 +37,16 @@ function filterByBrands(brands) {  //cogemos todo el catalogo y lo filtramos
     return catalog.filter(product => brands.includes(product.brand))
     // console.log(product, brands, brands.includes(product.brand))
   }
+=======
+function filterByBrands(brands) {
+  if (brands.length === 0) {
+    return all()
+  }
+  return catalog.filter(function (product) {
+    console.log(product, brands, brands.includes(product.brand))
+    return brands.includes(product.brand)
+  })
+>>>>>>> 801b7abdc6bdda3b90a9d352a48866cffe6aaba0
 }
 
 function brands() {
@@ -38,5 +56,10 @@ function brands() {
   return uniqueBrands;
 }
 
+<<<<<<< HEAD
 export { all, brands, filterByBrands };
 
+=======
+export { all, brands };
+export { filterByBrands }
+>>>>>>> 801b7abdc6bdda3b90a9d352a48866cffe6aaba0
