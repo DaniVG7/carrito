@@ -1,84 +1,84 @@
 body {
-    text-align: center;
-    background-color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(255, 255, 255);
 }
 
 main {
-    max-width: 1200px;
-    margin: auto;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .product-item {
-    border-radius: 2em;
-    /* border: solid 2px black; */
-    list-style: none;
-    padding: 1em;
-    width: 250px;
-    max-width: 300px;
-    margin: auto;
-
+  border-radius: 2em;
+  /* border: solid 2px black; */
+  list-style: none;
+  padding: 1em;
+  width: 250px;
+  max-width: 300px;
+  margin: auto;
 }
-.product-item:hover{
-    background-color: rgba(236, 224, 224, 0.2);
+.product-item:hover {
+  background-color: rgba(236, 224, 224, 0.2);
 }
-.product-item img{
+.product-item img {
   border-radius: 20px;
 }
 
 .product-grid {
-    display: grid;
-    gap: 4rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    width: max-content;
-    margin: 2rem auto;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  width: max-content;
+  margin: 2rem auto;
 }
 
 .product-grid img {
-    transition: 1s;
-    background-color: transparent;
+  transition: 1s;
+  background-color: transparent;
 }
 
 .product-grid img:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
-button{
+button {
   background-color: blue;
   font-weight: bold;
   color: white;
   padding: 10px;
   width: max-content;
   border-radius: 10px;
-  border:1px black groove;
+  border: 1px black groove;
   cursor: pointer;
   transition: 0.5s;
 }
 
-button:hover{
+button:hover {
   background-color: wheat;
   color: blue;
   font-weight: bold;
 }
 
-.cart{
-  background-color: rgba(100, 96, 96, 0.5);
+.cart {
+  background-color: rgba(189, 122, 122, 0.5);
   padding: 15px;
   border-radius: 1em;
   position: fixed;
   right: 5%;
   top: 5%;
 }
-.cart button{
-  background-color: lightgreen;
+.cart button {
+  background-color: rgba(189, 122, 122, 0.001);
   border: none;
 }
-.cart a{
+
+.cart a {
   margin-right: 10px;
   font-weight: bolder;
   color: white;
   transition: 0.5s;
 }
-.cart a:hover{
+.cart a:hover {
   font-size: 20px;
 }
